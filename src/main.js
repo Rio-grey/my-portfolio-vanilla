@@ -1,7 +1,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.js";
 import { render, router } from "./utilities";
-import HomePage from "./pages/Home";
+import HomePage from "./pages/home";
 import AboutPage from "./pages/About";
 import NotFoundPage from "./pages/NotFound";
 import ProjectsPage from "./pages/Projects";
