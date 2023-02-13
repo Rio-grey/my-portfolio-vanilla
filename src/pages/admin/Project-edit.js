@@ -1,11 +1,19 @@
+import { editProject, getProject } from "@/api/project";
 import { useState, useEffect, router } from "@/utilities";
+import axios from "axios";
 
 const AdminEditProjectPage = ({ id }) => {
   const [project, setProject] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:3000/projects/${id}`)
-      .then((response) => response.json())
-      .then((data) => setProject(data));
+    getProject(id)
+      .then(({ data }) => setProject(data))
+      .catch((error) => console.log(error));
+    // axios
+    //   .get(`http://localhost:3000/projects/${id}`)
+    //   .then(({ data }) => setProject(data));
+    // fetch(`http://localhost:3000/projects/${id}`)
+    //   .then((response) => response.json())
+    //   .then((data) => setProject(data));
   }, []);
   useEffect(() => {
     const form = document.getElementById("form-add");
@@ -13,15 +21,22 @@ const AdminEditProjectPage = ({ id }) => {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const formData = {
+        id,
         name: projectName.value,
       };
-      fetch(`http://localhost:3000/projects/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }).then(() => router.navigate("/admin/projects"));
+      editProject(formData)
+        .then(() => router.navigate("/admin/projects"))
+        .catch((error) => console.log(error));
+      // axios
+      //   .put(`http://localhost:3000/projects/${id}`, formData)
+      //   .then(() => router.navigate("/admin/projects"));
+      // fetch(`http://localhost:3000/projects/${id}`, {
+      //   method: "PUT",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(formData),
+      // }).then(() => router.navigate("/admin/projects"));
     });
   });
   return /*html*/ `

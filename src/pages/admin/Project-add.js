@@ -1,4 +1,6 @@
+import { addProject } from "@/api/project";
 import { useState, useEffect, router } from "@/utilities";
+import axios from "axios";
 
 const AdminAddProjectPage = () => {
   useEffect(() => {
@@ -9,13 +11,19 @@ const AdminAddProjectPage = () => {
       const formData = {
         name: projectName.value,
       };
-      fetch("http://localhost:3000/projects", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }).then(() => router.navigate("/admin/projects"));
+      addProject(formData)
+        .then(() => router.navigate("/admin/projects"))
+        .catch((error) => console.log(error));
+      // axios
+      //   .post("http://localhost:3000/projects", formData)
+      //   .then(() => router.navigate("/admin/projects"));
+      // fetch("http://localhost:3000/projects", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(formData),
+      // }).then(() => router.navigate("/admin/projects"));
     });
   });
   return /*html*/ `

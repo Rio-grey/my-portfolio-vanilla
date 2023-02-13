@@ -1,26 +1,47 @@
 // import { projects } from "@/data";
+import { deleteProject, getProjects } from "@/api/project";
 import { useEffect, useState } from "@/utilities";
+import axios from "axios";
 
 const AdminProjectsPage = () => {
   const [projects, setProjects] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/projects", {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((data) => setProjects(data));
+    // fetch("http://localhost:3000/projects", {
+    //   method: "GET",
+    // })
+    //   .then((response) => response.json())
+    //   .then((data) => setProjects(data));
+    // axios
+    //   .get(`http://localhost:3000/projects`)
+    //   .then(({ data }) => setProjects(data));
+    getProjects()
+      .then(({ data }) => setProjects(data))
+      .catch((error) => console.log(error));
   }, []);
   useEffect(() => {
     const btns = document.querySelectorAll(".btn-remove");
     for (let btn of btns) {
       btn.addEventListener("click", () => {
         const id = btn.dataset.id;
-        fetch(`http://localhost:3000/projects/${id}`, {
-          method: "DELETE",
-        }).then(() => {
-          const newProject = projects.filter((project) => project.id != id);
-          setProjects(newProject);
-        });
+        const confirm = window.confirm("Are you sure you want to remove");
+        if (confirm) {
+          deleteProject(id)
+            .then(() => {
+              const newProject = projects.filter((project) => project.id != id);
+              setProjects(newProject);
+            })
+            .catch((error) => console.log(error));
+        }
+        // axios.delete(`http://localhost:3000/projects/${id}`).then(() => {
+        //   const newProject = projects.filter((project) => project.id != id);
+        //   setProjects(newProject);
+        // });
+        // fetch(`http://localhost:3000/projects/${id}`, {
+        //   method: "DELETE",
+        // }).then(() => {
+        //   const newProject = projects.filter((project) => project.id != id);
+        //   setProjects(newProject);
+        // });
       });
     }
   });
