@@ -2,15 +2,19 @@
   "projects": [
     {
       "id": 1,
-      "name": "Dự án 1 update"
+      "name": "Dự án 1"
     },
     {
       "name": "Dự án mẫu",
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Dự án tốt nghiệp update"
+      "name": "Dự án 2",
+      "id": 4
+    },
+    {
+      "name": "Dự án tốt nghiệp",
+      "id": 5
     }
   ]
 }
