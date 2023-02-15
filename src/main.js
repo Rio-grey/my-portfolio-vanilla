@@ -11,7 +11,9 @@ import ContactPage from "./pages/Contact";
 import AdminProjectsPage from "./pages/admin/Projects";
 import AdminAddProjectsPage from "./pages/admin/Project-add";
 import AdminEditProjectsPage from "./pages/admin/Project-edit";
+import DashboardPage from "./pages/admin/Dashboard";
 const app = document.querySelector("#app");
+const mainAdmin = document.querySelector("#main-admin");
 
 router.on("/", () => render(HomePage, app));
 router.on("/about", () => render(AboutPage, app));
@@ -23,9 +25,10 @@ router.on("/project/:id", ({ data }) =>
 );
 router.notFound(() => render(NotFoundPage, app));
 // Admin
-router.on("/admin/projects", () => render(AdminProjectsPage, app));
-router.on("/admin/projects/add", () => render(AdminAddProjectsPage, app));
+router.on("/admin/dashboard", () => render(DashboardPage, mainAdmin));
+router.on("/admin/projects", () => render(AdminProjectsPage, mainAdmin));
+router.on("/admin/projects/add", () => render(AdminAddProjectsPage, mainAdmin));
 router.on("/admin/projects/:id/edit", ({ data }) =>
-  render(() => AdminEditProjectsPage(data), app)
+  render(() => AdminEditProjectsPage(data), mainAdmin)
 );
 router.resolve();

@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "node_modules/preline/dist/*.js",
     "./index.html",
     "./src/components/*.{html,js}",
     "./src/pages/**/*.{html,js}",
+    "./src/pages/admin/*.{html,js}",
   ],
   // prefix: "tw-",
   theme: {
@@ -11,7 +13,10 @@ module.exports = {
       fontFamily: {
         pacifico: ['"Pacifico"', "cursive"],
       },
+      maxWidth: {
+        wrapper: "1051px",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("preline/plugin")],
 };

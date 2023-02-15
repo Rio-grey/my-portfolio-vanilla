@@ -5,7 +5,7 @@ const Nav = () => {
         ${menus
           .map(
             (menu) =>
-              /*html*/ `<a class="hover:text-indigo-700 transition-all duration-200" href="#contact">${menu.name}</a>`
+              /*html*/ `<a class="hover:text-indigo-700 transition-all duration-200" href="${menu.path}">${menu.name}</a>`
           )
           .join("")}
       </nav>

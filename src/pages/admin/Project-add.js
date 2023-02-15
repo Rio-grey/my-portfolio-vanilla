@@ -6,14 +6,20 @@ const AdminAddProjectPage = () => {
   useEffect(() => {
     const form = document.getElementById("form-add");
     const projectName = document.getElementById("project-name");
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const formData = {
-        name: projectName.value,
-      };
-      addProject(formData)
-        .then(() => router.navigate("/admin/projects"))
-        .catch((error) => console.log(error));
+      try {
+        const formData = {
+          name: projectName.value,
+        };
+        await addProject(formData);
+        router.navigate("/admin/projects");
+      } catch (error) {
+        console.log(error);
+      }
+      // addProject(formData)
+      //   .then(() => router.navigate("/admin/projects"))
+      //   .catch((error) => console.log(error));
       // axios
       //   .post("http://localhost:3000/projects", formData)
       //   .then(() => router.navigate("/admin/projects"));

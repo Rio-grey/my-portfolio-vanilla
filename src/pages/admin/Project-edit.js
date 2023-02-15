@@ -5,9 +5,16 @@ import axios from "axios";
 const AdminEditProjectPage = ({ id }) => {
   const [project, setProject] = useState({});
   useEffect(() => {
-    getProject(id)
-      .then(({ data }) => setProject(data))
-      .catch((error) => console.log(error));
+    (async () => {
+      try {
+        setProject(await getProject(id));
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+    // getProject(id)
+    //   .then(({ data }) => setProject(data))
+    //   .catch((error) => console.log(error));
     // axios
     //   .get(`http://localhost:3000/projects/${id}`)
     //   .then(({ data }) => setProject(data));
@@ -18,15 +25,21 @@ const AdminEditProjectPage = ({ id }) => {
   useEffect(() => {
     const form = document.getElementById("form-add");
     const projectName = document.getElementById("project-name");
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const formData = {
-        id,
-        name: projectName.value,
-      };
-      editProject(formData)
-        .then(() => router.navigate("/admin/projects"))
-        .catch((error) => console.log(error));
+      try {
+        const formData = {
+          id,
+          name: projectName.value,
+        };
+        await editProject(formData);
+        router.navigate("/admin/projects");
+      } catch (error) {
+        console.log(error);
+      }
+      // editProject(formData)
+      //   .then(() => router.navigate("/admin/projects"))
+      //   .catch((error) => console.log(error));
       // axios
       //   .put(`http://localhost:3000/projects/${id}`, formData)
       //   .then(() => router.navigate("/admin/projects"));
