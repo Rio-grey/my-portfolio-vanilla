@@ -9,9 +9,12 @@ import ProjectDetailPage from "./pages/ProjectDetail";
 import BlogsPage from "./pages/Blogs";
 import ContactPage from "./pages/Contact";
 import AdminProjectsPage from "./pages/admin/Projects";
-import AdminAddProjectsPage from "./pages/admin/Project-add";
-import AdminEditProjectsPage from "./pages/admin/Project-edit";
+import AdminAddProjectPage from "./pages/admin/Project-add";
+import AdminEditProjectPage from "./pages/admin/Project-edit";
 import DashboardPage from "./pages/admin/Dashboard";
+import AdminCategoriesPage from "./pages/admin/Categories";
+import AdminAddCategoryPage from "./pages/admin/Category-add";
+import AdminEditCategoryPage from "./pages/admin/Category-edit";
 const app = document.querySelector("#app");
 const mainAdmin = document.querySelector("#main-admin");
 
@@ -27,8 +30,15 @@ router.notFound(() => render(NotFoundPage, app));
 // Admin
 router.on("/admin/dashboard", () => render(DashboardPage, mainAdmin));
 router.on("/admin/projects", () => render(AdminProjectsPage, mainAdmin));
-router.on("/admin/projects/add", () => render(AdminAddProjectsPage, mainAdmin));
+router.on("/admin/projects/add", () => render(AdminAddProjectPage, mainAdmin));
 router.on("/admin/projects/:id/edit", ({ data }) =>
-  render(() => AdminEditProjectsPage(data), mainAdmin)
+  render(() => AdminEditProjectPage(data), mainAdmin)
+);
+router.on("/admin/categories", () => render(AdminCategoriesPage, mainAdmin));
+router.on("/admin/categories/add", () =>
+  render(AdminAddCategoryPage, mainAdmin)
+);
+router.on("/admin/categories/:id/edit", ({ data }) =>
+  render(() => AdminEditCategoryPage(data), mainAdmin)
 );
 router.resolve();

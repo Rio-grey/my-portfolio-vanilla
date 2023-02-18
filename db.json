@@ -2,15 +2,91 @@
   "projects": [
     {
       "id": 1,
-      "name": "Dự án 1"
+      "name": "Riodeveloper Shop",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/riodeveloper",
+      "web": "https://rio-grey.github.io/riodeveloper/",
+      "language": "HTML5, CSS3, Javascript",
+      "date": "2022-08-11",
+      "categoryProjectId": "1",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676626401/ECMA-portfolio/chglxvfnjc2qxlmvwwvx.png"
+      ],
+      "desc": "A simple demo landing page with parallax scrolling effect and responsive layout."
     },
     {
-      "name": "Dự án mẫu",
+      "name": "Halloween ",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/riodeveloper",
+      "web": "https://rio-grey.github.io/riodeveloper/",
+      "language": "HTML, CSS, Javascript",
+      "date": "2022-10-14",
+      "categoryProjectId": "1",
+      "desc": "A simple demo landing page for Halloween with responsive layout.",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676630546/ECMA-portfolio/gdhgwqttcyo35c2e7awk.png"
+      ],
       "id": 2
     },
     {
-      "name": "Dự án tốt nghiệp",
+      "name": "LaslesVPN",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/riodeveloper",
+      "web": "https://rio-grey.github.io/riodeveloper/",
+      "language": "HTML, CSS, Javascript",
+      "date": "2022-01-06",
+      "categoryProjectId": "1",
+      "desc": "A simple demo landing page with parallax scrolling effect and responsive layout.",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676631535/ECMA-portfolio/rmdl4awhfrciynplamrv.png"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Evo Tour",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/evo_tour",
+      "web": "https://github.com/Rio-grey/evo_tour",
+      "language": "PHP, Bootstrap",
+      "date": "2022-11-16",
+      "categoryProjectId": "2",
+      "desc": "A simple website booking tour using MySQL, PHP, and Bootstrap",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676651984/ECMA-portfolio/zl1pnt5miavfildnmnzo.png"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Dự án 2",
+      "author": "Lê Đình Quý",
+      "source": "sdgasdgfdsgsfdgds",
+      "web": "dfgsfdgsdfgsdfgsdfg",
+      "language": "PHP",
+      "date": "2023-02-06",
+      "categoryProjectId": "2",
+      "desc": "fghfghfgjghjghj",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676657042/ECMA-portfolio/d3x4lzykf71yae9foljk.png"
+      ],
       "id": 5
+    }
+  ],
+  "categoryProjects": [
+    {
+      "id": 1,
+      "name": "HTML5 , CSS3"
+    },
+    {
+      "id": 2,
+      "name": "PHP"
+    },
+    {
+      "name": "Javascript",
+      "id": 3
+    },
+    {
+      "name": "React",
+      "id": 4
     }
   ]
 }

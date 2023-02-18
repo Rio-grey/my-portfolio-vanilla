@@ -1,8 +1,30 @@
+import { getCategories, getProjects } from "@/api/project";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MySkills from "@/components/MySkills";
+import { useEffect, useState } from "@/utilities";
 
 const HomePage = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    (async () => {
+      try {
+        setProjects(await getProjects());
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
+  const [category, setCategory] = useState([]);
+  useEffect(() => {
+    (async () => {
+      try {
+        setCategory(await getCategories());
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
   return /*html*/ `
     ${Header()}
     <div class="Aboutme mx-auto max-w-wrapper">
@@ -175,10 +197,10 @@ const HomePage = () => {
           </svg>
         </div>
       </div>
-      <div class="Portfolio max-w-wrapper mx-auto" id="portfolio">
+      <div class="Portfolio max-w-wrapper mx-auto" >
         <h1 class="text-[144px] font-semibold uppercase text-center mb-[210px]">Portfolio</h1>
         <div class="my-skills relative">
-          <h1 class="text-6xl mb-14">My Skills</h1>
+          <h1 class="text-6xl mb-14" id="portfolio">My Skills</h1>
           <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
             <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
               <path fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>
@@ -258,73 +280,7 @@ const HomePage = () => {
           <div class="content">
             <div>
               <h2 class="text-3xl font-medium mb-5">useTypewriter Hook</h2>
-              <p class="leading-8 pb-2 max-w-[434px]">A flexible hook for creating typewriter-like experience with React. Users can add functions for further applications.</p>
-              <p class="text-sm pb-2">2020 — Design & web development</p>
-            </div>
-            <div class="project-frameworks flex flex-col mt-4 mb-5">
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-            </div>
-            <div class="btns flex gap-4">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">View source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-2xl p-10 bg-pink-50 flex gap-10 mb-10">
-          <div class="image">
-            <img src="https://source.unsplash.com/random" class="w-[465px] h-[353px] object-cover rounded-lg"/>
-          </div>
-          <div class="content">
-            <div>
-              <h2 class="text-3xl font-medium mb-5">useTypewriter Hook</h2>
-              <p class="leading-8 pb-2 max-w-[434px]">A flexible hook for creating typewriter-like experience with React. Users can add functions for further applications.</p>
-              <p class="text-sm pb-2">2020 — Design & web development</p>
-            </div>
-            <div class="project-frameworks flex flex-col mt-4 mb-5">
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-            </div>
-            <div class="btns flex gap-4">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">View source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-2xl p-10 bg-pink-50 flex gap-10 mb-10">
-          <div class="image">
-            <img src="https://source.unsplash.com/random" class="w-[465px] h-[353px] object-cover rounded-lg"/>
-          </div>
-          <div class="content">
-            <div>
-              <h2 class="text-3xl font-medium mb-5">useTypewriter Hook</h2>
-              <p class="leading-8 pb-2 max-w-[434px]">A flexible hook for creating typewriter-like experience with React. Users can add functions for further applications.</p>
-              <p class="text-sm pb-2">2020 — Design & web development</p>
-            </div>
-            <div class="project-frameworks flex flex-col mt-4 mb-5">
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-            </div>
-            <div class="btns flex gap-4">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">View source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="rounded-2xl p-10 bg-pink-50 flex gap-10 mb-10">
-          <div class="image">
-            <img src="https://source.unsplash.com/random" class="w-[465px] h-[353px] object-cover rounded-lg"/>
-          </div>
-          <div class="content">
-            <div>
-              <h2 class="text-3xl font-medium mb-5">useTypewriter Hook</h2>
-              <p class="leading-8 pb-2 max-w-[434px]">A flexible hook for creating typewriter-like experience with React. Users can add functions for further applications.</p>
+              <p class="leading-8 pb-2 max-w-[434px] break-words">A flexible hook for creating typewriter-like experience with React. Users can add functions for further applications.</p>
               <p class="text-sm pb-2">2020 — Design & web development</p>
             </div>
             <div class="project-frameworks flex flex-col mt-4 mb-5">
@@ -343,6 +299,14 @@ const HomePage = () => {
     </div>
     <div class="Projects max-w-wrapper mx-auto">
       <h1 class="mb-14 text-[144px] animate-[text_recent_project] font-medium text-center font-pacifico text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Recent projects</h1>
+      <div class="text-center mb-9 flex gap-5 justify-center">
+        ${category
+          .map(
+            (item) =>
+              /*html*/ `<a href="" class="p-2 bg-slate-900 bg-opacity-10 inline-block rounded-lg">${item.name}</a>`
+          )
+          .join("")}
+      </div>
       <div class="project grid grid-cols-3 gap-10 relative">
         <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
           <svg class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
@@ -355,72 +319,25 @@ const HomePage = () => {
             </defs>
           </svg>
         </div>
-        <div class="project-item rounded-lg shadow-2xl">
-          <img class="h-56 object-cover rounded-t-lg" src="./src/images/project-1.png" alt="" />
-          <div class="content p-5">
-            <h2 class="title text-2xl font-medium text-center mb-3 tracking-[0.45px] leading-8">Riodeveloper</h2>
-            <p class="desc text-center mx-auto mb-4 max-w-[209px] font-light">A simple demo landing page with parallax scrolling effect and responsive layout.</p>
-            <div class="btns flex items-center justify-center gap-5">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">View source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">View website</a>
+        ${projects
+          .map((project) => {
+            return /*html*/ `
+            <div class="project-item hover:bg-blue-100 transition-all rounded-lg shadow-2xl">
+              <a href=""><img class="h-60 object-cover w-full rounded-t-lg" src="${project.gallery}" alt="" /></a>
+              <div class="content p-5">
+                <span class="text-sm text-gray-700 block mb-3 font-light">${project.date} — Web development</span>
+                <h2 class="title text-2xl font-medium mb-3 tracking-[0.45px] leading-8"><a href="">${project.name}</a></h2>
+                <span class="mb-3 inline-block py-1 px-2 rounded-md bg-black bg-opacity-5">${project.language}</span>
+                <p class="desc mb-4 font-light">${project.desc}</p>
+                <div class="btns flex gap-5 mt-auto">
+                  <a href="${project.source}" target="_blank" class="inline-block py-1.5 px-2 border-gray-500 border rounded-lg font-light">View source</a>
+                  <a href="${project.web}" target="_blank" class="inline-block py-1.5 px-2 border-gray-500 border rounded-lg font-light">Visit website</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="project-item rounded-lg shadow-2xl">
-          <img class="h-56 object-cover rounded-t-lg" src="./src/images/project-1.png" alt="" />
-          <div class="content p-5">
-            <h2 class="title text-2xl font-medium text-center mb-3 tracking-[0.45px] leading-8">Riodeveloper</h2>
-            <p class="desc text-center mx-auto mb-4 max-w-[209px] font-light">A simple demo landing page with parallax scrolling effect and responsive layout.</p>
-            <div class="btns flex items-center justify-center gap-5">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-item rounded-lg shadow-2xl">
-          <img class="h-56 object-cover rounded-t-lg" src="./src/images/project-1.png" alt="" />
-          <div class="content p-5">
-            <h2 class="title text-2xl font-medium text-center mb-3 tracking-[0.45px] leading-8">Riodeveloper</h2>
-            <p class="desc text-center mx-auto mb-4 max-w-[209px] font-light">A simple demo landing page with parallax scrolling effect and responsive layout.</p>
-            <div class="btns flex items-center justify-center gap-5">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-item rounded-lg shadow-2xl">
-          <img class="h-56 object-cover rounded-t-lg" src="./src/images/project-1.png" alt="" />
-          <div class="content p-5">
-            <h2 class="title text-2xl font-medium text-center mb-3 tracking-[0.45px] leading-8">Riodeveloper</h2>
-            <p class="desc text-center mx-auto mb-4 max-w-[209px] font-light">A simple demo landing page with parallax scrolling effect and responsive layout.</p>
-            <div class="btns flex items-center justify-center gap-5">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-item rounded-lg shadow-2xl">
-          <img class="h-56 object-cover rounded-t-lg" src="./src/images/project-1.png" alt="" />
-          <div class="content p-5">
-            <h2 class="title text-2xl font-medium text-center mb-3 tracking-[0.45px] leading-8">Riodeveloper</h2>
-            <p class="desc text-center mx-auto mb-4 max-w-[209px] font-light">A simple demo landing page with parallax scrolling effect and responsive layout.</p>
-            <div class="btns flex items-center justify-center gap-5">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-item rounded-lg shadow-2xl">
-          <img class="h-56 object-cover rounded-t-lg" src="./src/images/project-1.png" alt="" />
-          <div class="content p-5">
-            <h2 class="title text-2xl font-medium text-center mb-3 tracking-[0.45px] leading-8">Riodeveloper</h2>
-            <p class="desc text-center mx-auto mb-4 max-w-[209px] font-light">A simple demo landing page with parallax scrolling effect and responsive layout.</p>
-            <div class="btns flex items-center justify-center gap-5">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
+          `;
+          })
+          .join("")}
         <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
           <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
             <path fill="url(#ecb5b0c9-546c-4772-8c71-4d3f06d544bc)" fill-opacity=".3" d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"/>

@@ -15,4 +15,33 @@ const editProject = (project) => {
 const deleteProject = (id) => {
   return instance.delete(`/projects/${id}`);
 };
-export { getProjects, getProject, addProject, editProject, deleteProject };
+
+// categories
+const getCategories = () => {
+  return instance.get("/categoryProjects");
+};
+const deleteCategory = (id) => {
+  return instance.delete(`/categoryProjects/${id}`);
+};
+const addCategory = (category) => {
+  return instance.post("/categoryProjects", category);
+};
+const getCategory = (id) => {
+  return instance.get(`/categoryProjects/${id}`);
+};
+const editCategory = (category) => {
+  return instance.put(`/categoryProjects/${category.id}`, category);
+};
+
+export {
+  getProjects,
+  getProject,
+  addProject,
+  editProject,
+  deleteProject,
+  getCategories,
+  deleteCategory,
+  addCategory,
+  getCategory,
+  editCategory,
+};

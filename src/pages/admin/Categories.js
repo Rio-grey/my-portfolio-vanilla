@@ -1,11 +1,11 @@
 // import { projects } from "@/data";
-import { deleteProject, getProjects } from "@/api/project";
+import { deleteCategory, getCategories } from "@/api/project";
 import HeaderAdmin from "@/components/HeaderAdmin";
 import { useEffect, useState } from "@/utilities";
 import axios from "axios";
 
-const AdminProjectsPage = () => {
-  const [projects, setProjects] = useState([]);
+const AdminCategoriesPage = () => {
+  const [categories, setCategories] = useState([]);
   useEffect(() => {
     // fetch("http://localhost:3000/projects", {
     //   method: "GET",
@@ -20,7 +20,7 @@ const AdminProjectsPage = () => {
     //   .catch((error) => console.log(error));
     (async () => {
       try {
-        setProjects(await getProjects());
+        setCategories(await getCategories());
       } catch (error) {
         console.log(error);
       }
@@ -34,9 +34,11 @@ const AdminProjectsPage = () => {
         const confirm = window.confirm("Are you sure you want to remove");
         if (confirm) {
           try {
-            await deleteProject(id);
-            const newProject = projects.filter((project) => project.id != id);
-            setProjects(newProject);
+            await deleteCategory(id);
+            const newCategory = categories.filter(
+              (category) => category.id != id
+            );
+            setCategories(newCategory);
           } catch (error) {
             console.log(error);
           }
@@ -65,7 +67,7 @@ const AdminProjectsPage = () => {
       ${HeaderAdmin()}
       <header class="bg-white shadow">
         <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900">List projects</h1>
+          <h1 class="text-3xl font-bold tracking-tight text-gray-900">List categories</h1>
         </div>
       </header>
       <main>
@@ -84,42 +86,22 @@ const AdminProjectsPage = () => {
                           Name
                         </th>
                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Thumnail
-                        </th>
-                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Date
-                        </th>
-                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Author
-                        </th>
-                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Language
-                        </th>
-                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Category
-                        </th>
-                        <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          <a href="/admin/projects/add" class="inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Add</a>
+                          <a href="/admin/categories/add" class="inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Add</a>
                         </th>
                       </tr>
                     </thead class="border-b">
                     <tbody>
-                      ${projects
-                        .map((project, index) => {
+                      ${categories
+                        .map((category, index) => {
                           return /*html*/ `
                           <tr class="bg-white border-b">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${project.id}</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${category.id}</td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                              ${project.name}
+                              ${category.name}
                             </td>
-                            <td><img src="${project.gallery}" class="w-28 h-32 object-cover rounded-md shadow-md mx-auto"></td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.date}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.author}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.language}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.categoryProjectId}</td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                              <button data-id=${project.id} class="btn-remove inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Remove</button>
-                              <a href="/admin/projects/${project.id}/edit" class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">Edit</a>
+                              <button data-id=${category.id} class="btn-remove inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Remove</button>
+                              <a href="/admin/categories/${category.id}/edit" class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">Edit</a>
                             </td>
                           </tr class="bg-white border-b">
                         `;
@@ -136,4 +118,4 @@ const AdminProjectsPage = () => {
     </div>
   `;
 };
-export default AdminProjectsPage;
+export default AdminCategoriesPage;
