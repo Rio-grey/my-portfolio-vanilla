@@ -121,7 +121,7 @@ const HomePage = () => {
           <div class="wrapper">
             <div class="flex flex-wrap  gap-10 relative">
               <div class="shadow-2xl rounded-xl relative">
-                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="./src/images/dog.jpg" />
+                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698542/ECMA-portfolio/fun%20facts%20about%20me/dog_rqpian.jpg" />
                 <div class="bg-black p-5 rounded-xl bg-opacity-30 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full">
                   <h1 class="text-white text-4xl mb-12 text-center relative">1</h1>
                   <span style="position: absolute; content: ''; width: 60px; height: 3px; background-color: white;" class="text-center top-[75px] left-[50%] translate-x-[-50%]"></span>
@@ -129,7 +129,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div class="shadow-2xl rounded-xl relative">
-                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="./src/images/architect.jpg" />
+                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698528/ECMA-portfolio/fun%20facts%20about%20me/architect_n9ivjg.jpg" />
                 <div class="bg-black p-5 rounded-xl bg-opacity-30 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full">
                   <h1 class="text-white text-4xl mb-12 text-center relative">2</h1>
                   <span style="position: absolute; content: ''; width: 60px; height: 3px; background-color: white;" class="text-center top-[75px] left-[50%] translate-x-[-50%]"></span>
@@ -137,7 +137,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div class="shadow-2xl rounded-xl relative">
-                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="./src/images/rio.png" />
+                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698549/ECMA-portfolio/fun%20facts%20about%20me/Rio_gqpjpe.webp" />
                 <div class="bg-black p-5 rounded-xl bg-opacity-30 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full">
                   <h1 class="text-white text-4xl mb-12 text-center relative">3</h1>
                   <span style="position: absolute; content: ''; width: 60px; height: 3px; background-color: white;" class="text-center top-[75px] left-[50%] translate-x-[-50%]"></span>
@@ -145,7 +145,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div class="shadow-2xl rounded-xl relative">
-                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="./src/images/mayonaise.jpg" />
+                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698594/ECMA-portfolio/fun%20facts%20about%20me/mayonaise_cdh4za.jpg" />
                 <div class="bg-black p-5 rounded-xl bg-opacity-30 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full">
                   <h1 class="text-white text-4xl mb-12 text-center relative">4</h1>
                   <span style="position: absolute; content: ''; width: 60px; height: 3px; background-color: white;" class="text-center top-[75px] left-[50%] translate-x-[-50%]"></span>
@@ -153,7 +153,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div class="shadow-2xl rounded-xl relative">
-                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="./src/images/coffee.jpg" />
+                <img class="w-[230px] h-[200px] object-cover rounded-xl relative" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698535/ECMA-portfolio/fun%20facts%20about%20me/coffee_om7wkr.jpg" />
                 <div class="bg-black p-5 rounded-xl bg-opacity-30 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full">
                   <h1 class="text-white text-4xl mb-12 text-center relative">5</h1>
                   <span style="position: absolute; content: ''; width: 60px; height: 3px; background-color: white;" class="text-center top-[75px] left-[50%] translate-x-[-50%]"></span>
@@ -172,7 +172,7 @@ const HomePage = () => {
                 </svg>
               </div>
               <div class="shadow-2xl rounded-xl relative">
-                <img class="w-[230px] h-[200px] object-cover rounded-xl" src="./src/images/guitar.jpg" />
+                <img class="w-[230px] h-[200px] object-cover rounded-xl" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698612/ECMA-portfolio/fun%20facts%20about%20me/guitar_wddxbb.jpg" />
                 <div class="bg-black p-5 rounded-xl bg-opacity-30 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full h-full">
                   <h1 class="text-white text-4xl mb-12 text-center relative">6</h1>
                   <span style="position: absolute; content: ''; width: 60px; height: 3px; background-color: white;" class="text-center top-[75px] left-[50%] translate-x-[-50%]"></span>
