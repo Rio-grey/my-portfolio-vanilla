@@ -64,7 +64,7 @@ const HomePage = () => {
             <a href="https://www.facebook.com/riodeveloper" target="_blank" class="transition-all duration-200 uppercase bg-transparent hover:bg-indigo-500 text-indigo-700 font-semibold hover:text-white py-3 px-4 border-[3px] border-indigo-500 hover:border-transparent rounded-xl">Download Resume</a>
             </div>
           <div class="image">
-            <img class="rounded-xl w-96 h-[480px] object-cover" src="https://source.unsplash.com/random">
+            <img class="rounded-xl w-96 h-[480px] object-cover" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676700048/ECMA-portfolio/about%20me/75786c48a39b68c5318a_uldso1.jpg">
           </div>
         </div>
         <div class="story relative mb-48" id="about">
@@ -90,7 +90,7 @@ const HomePage = () => {
               <p class="text-base max-w-[540px]">In my free time, I like to watch Youtube and Netflix, and playing games. My favorite youtubers are Danny Gonzales and Drew Gooden (Go Greg and Little Stinkers!). Some games I usually play are Wild Rift, Clash of Clans, and League of Legends.</p>
             </div>
             <div class="image">
-              <img src="./src/images/eren.png" class="w-[190px] rounded-2xl translate-x-[-200px]"/>
+              <img src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698688/ECMA-portfolio/about%20me/eren_tfgf7c.png" class="w-[190px] rounded-2xl translate-x-[-200px]"/>
             </div>
           </div>
           <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
