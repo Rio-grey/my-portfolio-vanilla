@@ -3,7 +3,7 @@ const Footer = () => {
     <div class="contact mt-36" id="contact">
       <div
         class="w-full h-full bg-no-repeat p-16 bg-center bg-cover"
-        style="background-image: url(./src/images/gradient2.jpeg)"
+        style="background-image: url(https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698622/ECMA-portfolio/footer/gradient2_mjjp59.jpg)"
       >
         <h1 class="text-9xl text-white text-center mb-10">Get in touch!</h1>
         <form
