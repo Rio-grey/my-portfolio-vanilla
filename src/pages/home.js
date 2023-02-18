@@ -240,46 +240,46 @@ const HomePage = () => {
           </div>
           <div class="grid grid-cols-6 gap-10">
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/javascript.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698371/ECMA-portfolio/my%20skills/html_aocckr.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/html.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698359/ECMA-portfolio/my%20skills/css_jggkfh.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/css.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698387/ECMA-portfolio/my%20skills/javascript_p24i8y.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/tailwindcss.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698426/ECMA-portfolio/my%20skills/tailwindcss_qi0vk9.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/vercel.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698431/ECMA-portfolio/my%20skills/vercel_rmsjrl.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/nodejs.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698378/ECMA-portfolio/my%20skills/nodejs_z9mxdk.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/photoshop.png" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698408/ECMA-portfolio/my%20skills/photoshop_mjsrfg.png" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[75px] object-cover mx-auto" src="./src/images/pug.png" />
+              <img class="mb-3 w-[75px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698402/ECMA-portfolio/my%20skills/pug_w1llr2.png" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/figma.png" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698366/ECMA-portfolio/my%20skills/figma_vf3jxo.png" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/npm.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698394/ECMA-portfolio/my%20skills/npm_rwabzo.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/sass-1-logo-svg-vector.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698420/ECMA-portfolio/my%20skills/sass-1-logo-svg-vector_r4v2uv.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/bootstrap-4-logo-svg-vector.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698351/ECMA-portfolio/my%20skills/bootstrap-4-logo-svg-vector_gxmnku.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/php-logo-svg-vector.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698415/ECMA-portfolio/my%20skills/php-logo-svg-vector_vqnyki.svg" />
             </div>
             <div class="flex flex-col items-center justify-center w-[112px] h-[112px] rounded-2xl bg-white bg-opacity-50 shadow-md">
-              <img class="mb-3 w-[65px] object-cover mx-auto" src="./src/images/github-octocat-logo-svg-vector.svg" />
+              <img class="mb-3 w-[65px] object-cover mx-auto" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676698477/ECMA-portfolio/my%20skills/github-octocat-logo-svg-vector_gpyzm2.svg" />
             </div>
             <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
               <svg class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]" viewBox="0 0 1155 678" xmlns="http://www.w3.org/2000/svg">
