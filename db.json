@@ -55,38 +55,24 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676651984/ECMA-portfolio/zl1pnt5miavfildnmnzo.png"
       ],
       "id": 4
-    },
-    {
-      "name": "Dự án 2",
-      "author": "Lê Đình Quý",
-      "source": "sdgasdgfdsgsfdgds",
-      "web": "dfgsfdgsdfgsdfgsdfg",
-      "language": "PHP",
-      "date": "2023-02-06",
-      "categoryProjectId": "2",
-      "desc": "fghfghfgjghjghj",
-      "gallery": [
-        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676657042/ECMA-portfolio/d3x4lzykf71yae9foljk.png"
-      ],
-      "id": 5
     }
   ],
   "categoryProjects": [
     {
-      "id": 1,
+      "id": "1",
       "name": "HTML5 , CSS3"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "PHP"
     },
     {
-      "name": "Javascript",
-      "id": 3
+      "id": "3",
+      "name": "Javascript"
     },
     {
-      "name": "React",
-      "id": 4
+      "id": "4",
+      "name": "React"
     }
   ]
 }
