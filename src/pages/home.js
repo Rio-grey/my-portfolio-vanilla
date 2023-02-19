@@ -298,7 +298,7 @@ const HomePage = () => {
     </div>
 
     <div class="Projects max-w-wrapper mx-auto">
-      <h1 class="mb-14 text-[144px] font-medium text-center font-pacifico bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">Recent projects</h1>
+      <h1 style="-webkit-background-clip: text" class="mb-14 text-[144px] text-center overflow-visible font-pacifico bg-gradient-to-r from-fuchsia-500 to-cyan-500 bg-clip-text text-transparent">Recent projects</h1>
       ${Category({ category, onClick: onHandleClick })}
       <div class="project grid grid-cols-3 gap-10 relative">
         <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
