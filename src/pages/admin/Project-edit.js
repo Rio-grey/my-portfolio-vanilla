@@ -48,6 +48,7 @@ const AdminEditProjectPage = ({ id }) => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const urls = await uploadFiles(projectGallery.files);
+      const urls2 = await uploadFiles2(projectThumbnail.files);
       try {
         const formData = {
           id,
@@ -56,10 +57,11 @@ const AdminEditProjectPage = ({ id }) => {
           source: projectSource.value,
           web: projectWeb.value,
           language: projectLanguage.value,
+          thumbnail: urls2.length > 0 ? urls2 : project.thumbnail,
           date: projectDate.value,
           categoryProjectId: projectCategory.value,
           desc: projectDesc.value,
-          gallery: urls,
+          gallery: urls.length > 0 ? urls : project.gallery,
         };
         await editProject(formData);
         router.navigate("/admin/projects");
@@ -105,6 +107,30 @@ const AdminEditProjectPage = ({ id }) => {
       return urls;
     }
   };
+  const uploadFiles2 = async (files) => {
+    if (files) {
+      const CLOUD_NAME = "dg5ax2asx";
+      const PRESET_NAME = "riodev-portfolio";
+      const FOLDER_NAME = "ECMA-portfolio/project-thumbnail";
+      const urls2 = [];
+      const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+
+      const formData = new FormData(); // key : value
+      formData.append("upload_preset", PRESET_NAME);
+      formData.append("folder", FOLDER_NAME);
+
+      for (const file of files) {
+        formData.append("file", file);
+        const response = await axios.post(api, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
+        urls2.push(response.data.secure_url);
+      }
+      return urls2;
+    }
+  };
   return /*html*/ `
   <div class="min-h-full">
   ${HeaderAdmin()}
@@ -148,6 +174,15 @@ const AdminEditProjectPage = ({ id }) => {
             }" class="form-control py-1 px-2 w-full rounded border border-solid outline-none focus:border-sky-600 border-gray-300">
           </div>
           <div class="form-group mb-5 col-span-6 sm:col-span-3">
+            <img src="${
+              project.thumbnail
+            }" class="w-28 h-24 rounded-md border object-cover" />
+            <label for="project-thumbnail" class="form-label block mb-2">Thumbnail</label>
+            <input value="${
+              project.thumbnail
+            }" class="block w-full text-sm text-gray-900 border py-[3.8px] px-2 border-gray-300 rounded cursor-pointer focus:outline-none" id="project-thumbnail" type="file">
+          </div>
+          <div class="form-group mb-5 col-span-6 sm:col-span-3">
             <label for="project-date" class="form-label block mb-2">Date</label>
             <input type="date" id="project-date" value="${
               project.date
@@ -169,6 +204,16 @@ const AdminEditProjectPage = ({ id }) => {
         </div>
         <div class="form-group mb-5">
           <label for="" class="form-label block mb-2">Gallery Project</label>
+          ${
+            project.gallery
+              ? project.gallery
+                  .map(
+                    (item) =>
+                      `<img src="${item}" class="w-28 inline-block mr-3 h-24 rounded-md border object-cover" />`
+                  )
+                  .join("")
+              : ""
+          }
           <div class="flex items-center justify-center w-full">
             <label for="project-gallery" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-white">
               <div class="flex flex-col items-center justify-center pt-5 pb-6">
@@ -176,7 +221,9 @@ const AdminEditProjectPage = ({ id }) => {
                 <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span> or drag and drop</p>
                 <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
               </div>
-              <input id="project-gallery" type="file" multiple class="hidden" />
+              <input id="project-gallery" value="${
+                project.gallery
+              }" type="file" multiple class="hidden" />
             </label>
           </div> 
         </div>

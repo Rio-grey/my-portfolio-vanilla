@@ -84,7 +84,7 @@ const AdminProjectsPage = () => {
                           Name
                         </th>
                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Thumnail
+                          Thumbnail
                         </th>
                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                           Date
@@ -96,7 +96,7 @@ const AdminProjectsPage = () => {
                           Language
                         </th>
                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
-                          Category
+                          Description
                         </th>
                         <th scope="col" class="text-sm font-medium text-white px-6 py-4">
                           <a href="/admin/projects/add" class="inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out">Add</a>
@@ -109,14 +109,14 @@ const AdminProjectsPage = () => {
                           return /*html*/ `
                           <tr class="bg-white border-b">
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${project.id}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-wrap">
                               ${project.name}
                             </td>
-                            <td><img src="${project.gallery}" class="w-28 h-32 object-cover rounded-md shadow-md mx-auto"></td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.date}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.author}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.language}</td>
-                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">${project.categoryProjectId}</td>
+                            <td><img src="${project.thumbnail}" class="w-28 h-32 object-cover rounded-md shadow-md mx-auto"></td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-wrap">${project.date}</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-wrap">${project.author}</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-wrap">${project.language}</td>
+                            <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-wrap">${project.desc}</td>
                             <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                               <button data-id=${project.id} class="btn-remove inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out">Remove</button>
                               <a href="/admin/projects/${project.id}/edit" class="inline-block px-6 py-2.5 bg-yellow-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">Edit</a>

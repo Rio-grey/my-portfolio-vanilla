@@ -1,60 +1,131 @@
 {
   "projects": [
     {
-      "id": 1,
       "name": "Riodeveloper Shop",
       "author": "Lê Đình Quý",
       "source": "https://github.com/Rio-grey/riodeveloper",
       "web": "https://rio-grey.github.io/riodeveloper/",
-      "language": "HTML5, CSS3, Javascript",
-      "date": "2022-08-11",
-      "categoryProjectId": "1",
-      "gallery": [
-        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676626401/ECMA-portfolio/chglxvfnjc2qxlmvwwvx.png"
+      "language": "HTML, CSS, Javascript",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746047/ECMA-portfolio/project-thumbnail/lkdn2xx0jkjstyhihpa5.png"
       ],
-      "desc": "A simple demo landing page with parallax scrolling effect and responsive layout."
+      "date": "2022-07-07",
+      "categoryProjectId": "1",
+      "desc": "A simple demo landing page with parallax scrolling effect and responsive layout.",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746030/ECMA-portfolio/project-gallery/y5wfmcl0lhshijyqpmvf.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746033/ECMA-portfolio/project-gallery/dkwbwo1ntcu5z7xyrvdt.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746037/ECMA-portfolio/project-gallery/fwloqenoaxun0dfkzcad.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746040/ECMA-portfolio/project-gallery/m8hed0wh4qais84v18i4.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746044/ECMA-portfolio/project-gallery/wqbdfvfymmxarpgcumwx.png"
+      ],
+      "id": 1
     },
     {
-      "name": "Halloween ",
-      "author": "Lê Đình Quý",
-      "source": "https://github.com/Rio-grey/riodeveloper",
-      "web": "https://rio-grey.github.io/riodeveloper/",
-      "language": "HTML, CSS, Javascript",
-      "date": "2022-10-14",
-      "categoryProjectId": "1",
-      "desc": "A simple demo landing page for Halloween with responsive layout.",
+      "name": "Evo Tour",
+      "author": "Lê Đình Quý, Nguyễn Văn Quang, Nguyễn Trọng Nam, Khúc Công Trường",
+      "source": "https://github.com/Rio-grey/evo_tour",
+      "web": "https://github.com/Rio-grey/evo_tour",
+      "language": "PHP, Bootstrap",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780197/ECMA-portfolio/project-thumbnail/pdx7c1ajtavn1zxjhauf.png"
+      ],
+      "date": "2022-11-30",
+      "categoryProjectId": "2",
+      "desc": "A simple website booking tour using MySQL, PHP, and Bootstrap",
       "gallery": [
-        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676630546/ECMA-portfolio/gdhgwqttcyo35c2e7awk.png"
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780170/ECMA-portfolio/project-gallery/cofbhwc2f6zrwrghonuq.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780172/ECMA-portfolio/project-gallery/het9ob3fszam6dtgkzuo.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780176/ECMA-portfolio/project-gallery/hy6faxzuwiji6vr4xc5f.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780181/ECMA-portfolio/project-gallery/qlpj91g7sjg7hwu6zbuy.png",
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780194/ECMA-portfolio/project-gallery/wolifzmq7kac1grz8ljy.png"
       ],
       "id": 2
     },
     {
       "name": "LaslesVPN",
       "author": "Lê Đình Quý",
-      "source": "https://github.com/Rio-grey/riodeveloper",
-      "web": "https://rio-grey.github.io/riodeveloper/",
+      "source": "https://github.com/Rio-grey/LaslesVPN",
+      "web": "https://rio-grey.github.io/LaslesVPN/",
       "language": "HTML, CSS, Javascript",
-      "date": "2022-01-06",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780818/ECMA-portfolio/project-thumbnail/bd6ltgtdts99ewiihcrk.png"
+      ],
+      "date": "2022-04-14",
       "categoryProjectId": "1",
       "desc": "A simple demo landing page with parallax scrolling effect and responsive layout.",
       "gallery": [
-        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676631535/ECMA-portfolio/rmdl4awhfrciynplamrv.png"
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780817/ECMA-portfolio/project-gallery/kbyzpqejdjdctah23qnr.png"
       ],
       "id": 3
     },
     {
-      "name": "Evo Tour",
+      "name": "Simple MP3",
       "author": "Lê Đình Quý",
-      "source": "https://github.com/Rio-grey/evo_tour",
-      "web": "https://github.com/Rio-grey/evo_tour",
-      "language": "PHP, Bootstrap",
-      "date": "2022-11-16",
-      "categoryProjectId": "2",
-      "desc": "A simple website booking tour using MySQL, PHP, and Bootstrap",
+      "source": "https://github.com/Rio-grey/simple-mp3",
+      "web": "https://rio-grey.github.io/simple-mp3/",
+      "language": "HTML, CSS, Javascript",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780945/ECMA-portfolio/project-thumbnail/la3tbzlv56ufd8tew84l.png"
+      ],
+      "date": "2022-05-24",
+      "categoryProjectId": "3",
+      "desc": "A simple website listen to music using JavaScript",
       "gallery": [
-        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676651984/ECMA-portfolio/zl1pnt5miavfildnmnzo.png"
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780944/ECMA-portfolio/project-gallery/lifvhp6nkmjdsxjmzx9g.png"
       ],
       "id": 4
+    },
+    {
+      "name": "Halloween ",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/Halloween-landing-page",
+      "web": "https://rio-grey.github.io/Halloween-landing-page/",
+      "language": "HTML, CSS, Javascript",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781097/ECMA-portfolio/project-thumbnail/fhobjdeznhxgra36mchw.png"
+      ],
+      "date": "2022-09-23",
+      "categoryProjectId": "1",
+      "desc": "A simple demo landing page for Halloween with responsive layout.",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781095/ECMA-portfolio/project-gallery/nkkwnkbmyhyzkixlcxeg.png"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Simple CRUD User",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/CRUD-user-basic",
+      "web": "https://rio-grey.github.io/CRUD-user-basic/",
+      "language": "HTML, CSS, Javascript",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781701/ECMA-portfolio/project-thumbnail/kfjrkskvekcutdzm2tis.png"
+      ],
+      "date": "2022-07-29",
+      "categoryProjectId": "3",
+      "desc": "A simple website CRUD user using JavaScript for test",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781700/ECMA-portfolio/project-gallery/bj3zlbaxllltts6hfz8b.png"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Dự án mẫu",
+      "author": "Lê Đình Quý",
+      "source": "https://github.com/Rio-grey/Du-an-mau",
+      "web": "https://github.com/Rio-grey/Du-an-mau",
+      "language": "PHP, CSS",
+      "thumbnail": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676782103/ECMA-portfolio/project-thumbnail/bxalh0jgzxy6vgbzwesp.png"
+      ],
+      "date": "2022-09-08",
+      "categoryProjectId": "2",
+      "desc": "A simple website online shopping using MySQL, PHP, and CSS",
+      "gallery": [
+        "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676782102/ECMA-portfolio/project-gallery/oun2mphgwmu3or6hbmko.png"
+      ],
+      "id": 7
     }
   ],
   "categoryProjects": [

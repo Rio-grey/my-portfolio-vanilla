@@ -82,7 +82,7 @@ const HomePage = () => {
           <h1 class="text-6xl font-semibold mb-10">My story</h1>
           <div class="my-story-content flex gap-x-10">  
             <p class="max-w-[820px] text-lg mb-10">I was born and raised in Hung Yen. After graduating from Tran Quang Khai High School, I attended FPT Polytechnic Hanoi as a computer science student, where I began my intensive journey in front-end programming. In addition to studying at school, I regularly learn more on F8 Fullstack and on Youtube channels like evondev, j2teams,...</p>
-            <img class=" rounded-full w-40 h-40 object-cover" src="https://images.unsplash.com/photo-1643330683233-ff2ac89b002c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" />
+            <img class=" rounded-full w-40 h-40 object-cover" src="https://res.cloudinary.com/dg5ax2asx/image/upload/v1676700367/ECMA-portfolio/about%20me/javier-miranda-Jn2EaLLYZfY-unsplash_sxcjg0.jpg" />
           </div>
           <div class="myself-card flex items-end">
             <div class="my_hobbies w-[800px] px-9 py-7 rounded-3xl shadow-2xl">
@@ -296,33 +296,7 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-    <div class="featured max-w-wrapper mx-auto mb-28" id="projects">
-      <h1 class="mb-8 text-[200px] text-center">Featured</h1>
-      <div class="project-featured">
-        <div class="rounded-2xl p-10 bg-pink-50 flex gap-10 mb-10">
-          <div class="image">
-            <img src="https://source.unsplash.com/random" class="w-[465px] h-[353px] object-cover rounded-lg"/>
-          </div>
-          <div class="content">
-            <div>
-              <h2 class="text-3xl font-medium mb-5">useTypewriter Hook</h2>
-              <p class="leading-8 pb-2 max-w-[434px] break-words">A flexible hook for creating typewriter-like experience with React. Users can add functions for further applications.</p>
-              <p class="text-sm pb-2">2020 — Design & web development</p>
-            </div>
-            <div class="project-frameworks flex flex-col mt-4 mb-5">
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-              <div class="inline-flex items-center"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="text-projecs-arrow w-5 mr-3"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg><p class="text-[15px] leading-7">React.js</p></div>
-            </div>
-            <div class="btns flex gap-4">
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">View source</a>
-              <a href="" class="inline-block p-2 border-gray-500 border rounded-lg font-light">Visit website</a>
-            </div>
-          </div>
-        </div>
-      </div>  
-    </div>
+
     <div class="Projects max-w-wrapper mx-auto">
       <h1 class="mb-14 text-[144px] animate-[text_recent_project] font-medium text-center font-pacifico text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">Recent projects</h1>
       ${Category({ category, onClick: onHandleClick })}
@@ -345,10 +319,10 @@ const HomePage = () => {
               .map((project) => {
                 return /*html*/ `
                 <div class="project-item hover:bg-blue-100 transition-all rounded-lg shadow-2xl">
-                  <a href=""><img class="h-60 object-cover w-full rounded-t-lg" src="${project.gallery}" alt="" /></a>
+                  <a href="/project/${project.id}"><img class="h-60 object-cover w-full rounded-t-lg" src="${project.thumbnail}" alt="" /></a>
                   <div class="content p-5">
                     <span class="text-sm text-gray-700 block mb-3 font-light">${project.date} — Web development</span>
-                    <h2 class="title text-2xl font-medium mb-3 tracking-[0.45px] leading-8"><a href="">${project.name}</a></h2>
+                    <h2 class="title text-2xl font-medium mb-3 tracking-[0.45px] leading-8"><a href="/project/${project.id}">${project.name}</a></h2>
                     <span class="mb-3 inline-block py-1 px-2 rounded-md bg-black bg-opacity-5">${project.language}</span>
                     <p class="desc mb-4 font-light">${project.desc}</p>
                     <div class="btns flex gap-5 mt-auto">
@@ -366,10 +340,10 @@ const HomePage = () => {
             .map((project) => {
               return /*html*/ `
               <div class="project-item hover:bg-blue-100 transition-all rounded-lg shadow-2xl">
-                <a href=""><img class="h-60 object-cover w-full rounded-t-lg" src="${project.gallery}" alt="" /></a>
+                <a href="/project/${project.id}"><img class="h-60 object-cover w-full rounded-t-lg" src="${project.thumbnail}" alt="" /></a>
                 <div class="content p-5">
                   <span class="text-sm text-gray-700 block mb-3 font-light">${project.date} — Web development</span>
-                  <h2 class="title text-2xl font-medium mb-3 tracking-[0.45px] leading-8"><a href="">${project.name}</a></h2>
+                  <h2 class="title text-2xl font-medium mb-3 tracking-[0.45px] leading-8"><a href="/project/${project.id}">${project.name}</a></h2>
                   <span class="mb-3 inline-block py-1 px-2 rounded-md bg-black bg-opacity-5">${project.language}</span>
                   <p class="desc mb-4 font-light">${project.desc}</p>
                   <div class="btns flex gap-5 mt-auto">

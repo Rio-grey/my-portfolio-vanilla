@@ -19,6 +19,7 @@ const AdminAddProjectPage = () => {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const urls = await uploadFiles(projectGallery.files);
+      const urls2 = await uploadFiles2(projectThumbnail.files);
       try {
         const formData = {
           name: projectName.value,
@@ -26,6 +27,7 @@ const AdminAddProjectPage = () => {
           source: projectSource.value,
           web: projectWeb.value,
           language: projectLanguage.value,
+          thumbnail: urls2,
           date: projectDate.value,
           categoryProjectId: projectCategory.value,
           desc: projectDesc.value,
@@ -55,7 +57,7 @@ const AdminAddProjectPage = () => {
     if (files) {
       const CLOUD_NAME = "dg5ax2asx";
       const PRESET_NAME = "riodev-portfolio";
-      const FOLDER_NAME = "ECMA-portfolio";
+      const FOLDER_NAME = "ECMA-portfolio/project-gallery";
       const urls = [];
       const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
 
@@ -73,6 +75,30 @@ const AdminAddProjectPage = () => {
         urls.push(response.data.secure_url);
       }
       return urls;
+    }
+  };
+  const uploadFiles2 = async (files) => {
+    if (files) {
+      const CLOUD_NAME = "dg5ax2asx";
+      const PRESET_NAME = "riodev-portfolio";
+      const FOLDER_NAME = "ECMA-portfolio/project-thumbnail";
+      const urls2 = [];
+      const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+
+      const formData = new FormData(); // key : value
+      formData.append("upload_preset", PRESET_NAME);
+      formData.append("folder", FOLDER_NAME);
+
+      for (const file of files) {
+        formData.append("file", file);
+        const response = await axios.post(api, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
+        urls2.push(response.data.secure_url);
+      }
+      return urls2;
     }
   };
   return /*html*/ `
@@ -107,12 +133,10 @@ const AdminAddProjectPage = () => {
                 <label for="project-language" class="form-label block mb-2">Language</label>
                 <input type="text" id="project-language" class="form-control py-1 px-2 w-full rounded border border-solid outline-none focus:border-sky-600 border-gray-300">
               </div>
-              <!--
               <div class="form-group mb-5 col-span-6 sm:col-span-3">
                 <label for="project-thumbnail" class="form-label block mb-2">Thumbnail</label>
-                <input class="block w-full text-sm text-gray-900 border py-[3.8px] px-2 border-gray-300 rounded cursor-pointer dark:text-gray-400 focus:outline-none" id="project-thumbnail" type="file">
+                <input class="block w-full text-sm text-gray-900 border py-[3.8px] px-2 border-gray-300 rounded cursor-pointer focus:outline-none" id="project-thumbnail" type="file">
               </div>
-              -->
               <div class="form-group mb-5 col-span-6 sm:col-span-3">
                 <label for="project-date" class="form-label block mb-2">Date</label>
                 <input type="date" min="1997-01-01" max="2090-12-31" id="project-date" class="form-control py-[3px] px-2 w-full rounded border border-solid outline-none focus:border-sky-600 border-gray-300">
