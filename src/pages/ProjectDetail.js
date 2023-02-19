@@ -1,9 +1,7 @@
 import Header from "@/components/Header";
-import { useEffect, useState } from "@/utilities";
+import { useEffect, useState, router } from "@/utilities";
 import { getProject } from "@/api/project";
 import ProjectInfo from "@/components/ProjectInfo";
-// import { projects } from "@/data";
-import { router } from "@/utilities";
 
 const ProjectDetailPage = ({ id }) => {
   const [projects, setProjects] = useState({});
@@ -23,18 +21,21 @@ const ProjectDetailPage = ({ id }) => {
       <p class="text-center bg-black bg-opacity-10 px-5 py-3 rounded-full w-60 mx-auto mb-20">Project || Project Detail</p>
       <div class="project-main relative">
         <div class="project-gallery">
-          ${
+          <div>${
             projects.gallery
               ? projects.gallery
                   .map((item) => {
                     return `<img
                     src="${item}"
-                    class="h-[600px] w-full object-cover shadow-xl"
+                    class="h-auto w-full object-cover shadow-xl duration-500 rounded-xl mb-5"
                   ></img>`;
                   })
                   .join("")
               : ""
-          }
+          }</div>
+        </div>
+        <div class="project-desc">
+          <h1>${projects.desc}</h1>
         </div>
         <div class="project-info bg-[#252734]  w-[265px] py-[50px] px-10 absolute right-5 top-[570px] text-white">
           <h1 class="text-center text-3xl mb-10 font-medium">Information</h1>

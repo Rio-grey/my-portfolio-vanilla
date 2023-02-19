@@ -29,7 +29,7 @@ const AdminAddProjectPage = () => {
           language: projectLanguage.value,
           thumbnail: urls2,
           date: projectDate.value,
-          categoryProjectId: projectCategory.value,
+          categoryProjectId: parseInt(projectCategory.value),
           desc: projectDesc.value,
           gallery: urls,
         };

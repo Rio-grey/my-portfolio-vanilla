@@ -176,7 +176,7 @@ const AdminEditProjectPage = ({ id }) => {
           <div class="form-group mb-5 col-span-6 sm:col-span-3">
             <img src="${
               project.thumbnail
-            }" class="w-28 h-24 rounded-md border object-cover" />
+            }" class="w-auto h-24 rounded-md border object-cover" />
             <label for="project-thumbnail" class="form-label block mb-2">Thumbnail</label>
             <input value="${
               project.thumbnail
@@ -209,7 +209,7 @@ const AdminEditProjectPage = ({ id }) => {
               ? project.gallery
                   .map(
                     (item) =>
-                      `<img src="${item}" class="w-28 inline-block mr-3 h-24 rounded-md border object-cover" />`
+                      `<img src="${item}" class="w-auto inline-block mr-3 h-24 rounded-md border object-cover" />`
                   )
                   .join("")
               : ""

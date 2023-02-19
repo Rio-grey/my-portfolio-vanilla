@@ -28,7 +28,7 @@ router.on("/project/:id", ({ data }) =>
 );
 router.notFound(() => render(NotFoundPage, app));
 // Admin
-router.on("/admin/dashboard", () => render(DashboardPage, mainAdmin));
+router.on("/admin/", () => render(DashboardPage, mainAdmin));
 router.on("/admin/projects", () => render(AdminProjectsPage, mainAdmin));
 router.on("/admin/projects/add", () => render(AdminAddProjectPage, mainAdmin));
 router.on("/admin/projects/:id/edit", ({ data }) =>

@@ -10,7 +10,7 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746047/ECMA-portfolio/project-thumbnail/lkdn2xx0jkjstyhihpa5.png"
       ],
       "date": "2022-07-07",
-      "categoryProjectId": "1",
+      "categoryProjectId": 1,
       "desc": "A simple demo landing page with parallax scrolling effect and responsive layout.",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676746030/ECMA-portfolio/project-gallery/y5wfmcl0lhshijyqpmvf.png",
@@ -31,7 +31,7 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780197/ECMA-portfolio/project-thumbnail/pdx7c1ajtavn1zxjhauf.png"
       ],
       "date": "2022-11-30",
-      "categoryProjectId": "2",
+      "categoryProjectId": 2,
       "desc": "A simple website booking tour using MySQL, PHP, and Bootstrap",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780170/ECMA-portfolio/project-gallery/cofbhwc2f6zrwrghonuq.png",
@@ -43,21 +43,21 @@
       "id": 2
     },
     {
+      "id": 3,
       "name": "LaslesVPN",
       "author": "Lê Đình Quý",
       "source": "https://github.com/Rio-grey/LaslesVPN",
       "web": "https://rio-grey.github.io/LaslesVPN/",
-      "language": "HTML, CSS, Javascript",
+      "language": "HTML, SCSS, Javascript",
       "thumbnail": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780818/ECMA-portfolio/project-thumbnail/bd6ltgtdts99ewiihcrk.png"
       ],
       "date": "2022-04-14",
-      "categoryProjectId": "1",
+      "categoryProjectId": 1,
       "desc": "A simple demo landing page with parallax scrolling effect and responsive layout.",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780817/ECMA-portfolio/project-gallery/kbyzpqejdjdctah23qnr.png"
-      ],
-      "id": 3
+      ]
     },
     {
       "name": "Simple MP3",
@@ -69,7 +69,7 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780945/ECMA-portfolio/project-thumbnail/la3tbzlv56ufd8tew84l.png"
       ],
       "date": "2022-05-24",
-      "categoryProjectId": "3",
+      "categoryProjectId": 3,
       "desc": "A simple website listen to music using JavaScript",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676780944/ECMA-portfolio/project-gallery/lifvhp6nkmjdsxjmzx9g.png"
@@ -86,7 +86,7 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781097/ECMA-portfolio/project-thumbnail/fhobjdeznhxgra36mchw.png"
       ],
       "date": "2022-09-23",
-      "categoryProjectId": "1",
+      "categoryProjectId": 1,
       "desc": "A simple demo landing page for Halloween with responsive layout.",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781095/ECMA-portfolio/project-gallery/nkkwnkbmyhyzkixlcxeg.png"
@@ -103,7 +103,7 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781701/ECMA-portfolio/project-thumbnail/kfjrkskvekcutdzm2tis.png"
       ],
       "date": "2022-07-29",
-      "categoryProjectId": "3",
+      "categoryProjectId": 3,
       "desc": "A simple website CRUD user using JavaScript for test",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676781700/ECMA-portfolio/project-gallery/bj3zlbaxllltts6hfz8b.png"
@@ -120,7 +120,7 @@
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676782103/ECMA-portfolio/project-thumbnail/bxalh0jgzxy6vgbzwesp.png"
       ],
       "date": "2022-09-08",
-      "categoryProjectId": "2",
+      "categoryProjectId": 2,
       "desc": "A simple website online shopping using MySQL, PHP, and CSS",
       "gallery": [
         "https://res.cloudinary.com/dg5ax2asx/image/upload/v1676782102/ECMA-portfolio/project-gallery/oun2mphgwmu3or6hbmko.png"
@@ -130,19 +130,19 @@
   ],
   "categoryProjects": [
     {
-      "id": "1",
+      "id": 1,
       "name": "HTML5 , CSS3"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "PHP"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Javascript"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "React"
     }
   ]
